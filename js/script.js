@@ -52,7 +52,7 @@ while(gameLoop){
   } else {
 
     // -- 2.2 -- controllo il numero dato non è nell'array dei punti
-    if(!points.includes(userValue) && isNaN(!userValue)){
+    if(!points.includes(userValue) && !isNaN(userValue) && userValue < gameMaxRange){
       
       points.push(userValue)
       console.log(points)
@@ -101,9 +101,11 @@ function endGames(value, points) {
   if(value === "lost"){
     
     alert("hai perso")
+    alert("hai totalizzato " + points.length + " punti")
   } else {
 
     alert("hai vinto")
+    alert("hai totalizzato " + points.length + " punti")
   }
   
   return false;
