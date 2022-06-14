@@ -52,7 +52,7 @@ while(gameLoop){
   } else {
 
     // -- 2.2 -- controllo il numero dato non è nell'array dei punti
-    if(!points.includes(userValue) && !isNaN(userValue) && userValue < gameMaxRange){
+    if(!points.includes(userValue) && !isNaN(userValue) && userValue < gameMaxRange && userValue > 0){
       
       points.push(userValue)
       console.log(points)
